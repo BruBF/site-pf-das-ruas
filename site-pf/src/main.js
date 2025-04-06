@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import theme from "@/utils/theme"; 
+import theme from "./utils/theme"; 
 
 const app = createApp(App);
 
