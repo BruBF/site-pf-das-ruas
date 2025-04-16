@@ -1,119 +1,165 @@
 <template>
-    <div class="container-footer">
-      <div class="midia-social">
-        <div class="text-midia-social">
-          Conheça mais sobre nosso trabalho nas Redes Sociais
+  <div class="container-footer">
+    <div class="footer-content">
+      <!-- Endereço -->
+      <div class="footer-item">
+        <div class="icon-circle">
+          <img src="../assets/geo-alt-fill.svg" alt="Ícone Localização" />
         </div>
-        <div class="icons-midia-social">
-          <a href="https://www.instagram.com/pf_das_ruas/" target="_blank" rel="noopener noreferrer">
-            <img src="../assets/instagram.svg" alt="Ícone Instagram" />
-          </a>
-          <a href="https://www.facebook.com/pfdasruas" target="_blank" rel="noopener noreferrer">
-            <img src="../assets/facebook.svg" alt="Ícone Facebook" />
-          </a>
+        <div>
+          <p class="footer-title">Nosso Endereço:</p>
+          <p>Rua Exemplo, 123, Bairro, Cidade, Estado</p>
         </div>
       </div>
-  
-      <div class="contact">
-        <div class="text-contact">
-          Contato/Whatsapp
+
+      <!-- Telefone -->
+      <div class="footer-item">
+        <div class="icon-circle">
+          <img src="../assets/telephone-fill.svg" alt="Ícone Telefone" />
         </div>
-        <div class="icons-contact">
-          <div class="telephone-contact">
-            <a href="tel:+5551998472398">
-              <img src="../assets/telephone-fill.svg" alt="Ícone Telefone" />
-            </a>
-            <p>(51) 99847-2398</p>
-          </div>
-          <!--  -->
-          <div class="email-contact">
-            <a href="mailto:rosepaz@terra.com.br">
-              <img src="../assets/envelope-fill.svg" alt="Ícone Envelope" />
-            </a>
-            <p>rosepaz@terra.com.br</p>
-          </div>
+        <div>
+          <p class="footer-title">Ligue para nós:</p>
+          <p>(51) 99847-2398</p>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="footer-item">
+        <div class="icon-circle">
+          <img src="../assets/envelope-fill.svg" alt="Ícone Email" />
+        </div>
+        <div>
+          <p class="footer-title">Envie-nos um email:</p>
+          <p>rosepaz@terra.com.br</p>
+        </div>
+      </div>
+
+      <!-- Redes Sociais -->
+      <div class="footer-item">
+        <p class="footer-title">Siga-nos:</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/pf_das_ruas/" target="_blank" rel="noopener noreferrer">
+            <div class="icon-circle">
+              <img src="../assets/instagram.svg" alt="Ícone Instagram" />
+            </div>
+          </a>
+          <a href="https://www.facebook.com/pfdasruas" target="_blank" rel="noopener noreferrer">
+            <div class="icon-circle">
+              <img src="../assets/facebook.svg" alt="Ícone Facebook" />
+            </div>
+          </a>
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: "Footer",
-  };
-  </script>
-  
-  <style scoped>
-  html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+
+    <!-- Rodapé -->
+    <div class="footer-bottom">
+      <p>© 2025 Todos os direitos reservados para PF das Ruas</p>
+      <div class="footer-links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos e Condições</a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Footer",
+};
+</script>
+
+<style scoped>
+/* Estilo geral do footer */
+.container-footer {
+  background-color: var(--primary);
+  color: var(--textLight);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-* {
-  box-sizing: inherit;
+/* Conteúdo principal do footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-bottom: 1px solid var(--textLight);
+  padding-bottom: 20px;
 }
-  .container-footer {
-    background-color: var(--primary);
-    color: var(--textLight);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    gap: 20px;
-  }
-  
-  .midia-social, .contact {
-    text-align: left; 
-    width: 100%; 
-  }
-  
-  .text-midia-social, .text-contact {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-xs);
-    margin-bottom: 10px;
-  }
-  
-  .icons-midia-social {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .icons-midia-social img, .icons-contact img {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px 0 0; 
-    filter: brightness(0) invert(1); 
-    transition: transform 0.3s ease, filter 0.3s ease; 
-  }
-  
-  .icons-midia-social img:hover, .icons-contact img:hover {
-    transform: scale(1.2); 
-  }
-  
-  .icons-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    gap: 10px;
-  }
-  
-  .telephone-contact, .email-contact {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .telephone-contact img, .email-contact img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .telephone-contact p, .email-contact p {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-xs);
-    margin: 0;
-  }
-  </style>
+
+/* Itens do footer */
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Ícones circulares */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 50%; /* Torna o fundo circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  transition: background-color 0.3s ease; /* Apenas o fundo muda suavemente */
+}
+
+.icon-circle img {
+  width: 24px;
+  height: 24px;
+  filter: invert(47%) sepia(27%) saturate(600%) hue-rotate(120deg) brightness(110%) contrast(100%);
+  /* Alternativa: Se o SVG suportar a propriedade fill */
+  fill: var(--mint); /* Aplica a cor da variável --mint */
+  transition: transform 0.3s ease; /* Transição suave para o tamanho da imagem */
+}
+
+.icon-circle:hover img {
+  cursor: pointer;
+  transform: scale(1.3); /* Aumenta levemente o tamanho da imagem */
+}
+
+/* Títulos dos itens */
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Redes sociais */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: var(--font-size-xs);
+}
+
+.footer-links a {
+  color: var(--textLight);
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+</style>
