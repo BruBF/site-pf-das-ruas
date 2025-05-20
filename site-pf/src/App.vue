@@ -1,6 +1,6 @@
 <script setup>
 import Header from './components/Header.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import HelloWorld from './components/HelloWorld.vue';
 import  Footer  from './components/Footer.vue'
 </script>
 
@@ -10,7 +10,7 @@ import  Footer  from './components/Footer.vue'
  
 
   <main>
-    <TheWelcome />
+    <HelloWorld />
   </main>
 
   <Footer />
