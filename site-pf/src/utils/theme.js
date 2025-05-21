@@ -4,7 +4,7 @@ const theme = {
       xs: 320,   // Mobile
       sm: 640,   // Pequeno
       md: 768,   // Tablet
-      lg: 1028,  // Grande
+      lg: 1000,  // Grande
       xl: 1280,  // Extra grande
       xxl: 1440  // Muito grande
     },
@@ -21,7 +21,8 @@ const theme = {
     fonts: {
       family: {
         primary: "'Inter', sans-serif", 
-        secondary: "'Roboto', sans-serif"
+        secondary: "'Roboto', sans-serif",
+        logo: "'Pacifico', cursive"
       },
       sizes: {
         xs: "12px",
