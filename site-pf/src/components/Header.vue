@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
 * {
   box-sizing: border-box;
@@ -55,8 +55,9 @@ body {
 
 .logo-text {
   color: var(--background);
-  font-family: "Island Moments", cursive;
+  font-family: "Ephesis ", cursive;
   font-weight: 400;
+  font-style: normal;
   font-size: 30px;
   letter-spacing: 1px;
 }

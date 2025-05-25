@@ -1,34 +1,36 @@
-<script setup>
-import Header from './components/Header.vue'
-import HelloWorld from './components/HelloWorld.vue';
-import  Footer  from './components/Footer.vue'
-</script>
-
 <template>
- 
-   <Header />
- 
-
-  <main>
-    <HelloWorld />
-  </main>
-
+  <Header />
+   <router-view /> 
   <Footer />
-
 </template>
 
-<style scoped>
-/* src/assets/main.css */
-@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+<script>
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 
-header {
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Footer
+  }
+};
+</script>
+
+<style>
+/* src/assets/main.css */
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+.header {
   line-height: 1.5;
 }
 
 .logo-text {
   color: var(--background);
-  font-family: "Island Moments", cursive;
+  font-family: "Ephesis", cursive;
   font-weight: 400;
+  font-style: normal;
   font-size: 30px;
   letter-spacing: 1px;
 }
