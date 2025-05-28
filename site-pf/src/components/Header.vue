@@ -31,6 +31,9 @@ body {
 .header {
   background-color: var(--primary);
   padding: 1rem;
+  width: 100vw; /* Garante que ocupe toda a largura */
+  box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+  position: relative; /* Garante que o header fique no fluxo normal */
 }
 
 .header-content {
@@ -39,8 +42,9 @@ body {
   gap: 1rem;
   padding: 0 1rem;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo */
 }
-
 .logo-area {
   display: flex;
   flex-direction: column;

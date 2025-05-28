@@ -69,7 +69,6 @@ export default {
   padding: 24px;
   width: 320px;
   max-width: 100%;
-  margin: 50px 0 50px 0;
   box-sizing: border-box;
   overflow: hidden; 
 }
