@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Index from '@/pages/index.vue';
+import Doacoes from '@/pages/doacoes.vue';
 
 const routes = [
   {
@@ -7,7 +8,12 @@ const routes = [
     name: 'Home',
     component: Index
   },
-  // outras rotas...
+  
+  {
+    path: '/doacoes',
+    name: 'Doacoes',
+    component: Doacoes
+  }
 ];
 
 const router = createRouter({

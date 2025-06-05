@@ -37,18 +37,23 @@ export default {
 </script>
 
 <style scoped>
+* {
+  font-family: var(--font-family-primary, 'Inter', sans-serif);
+  font-size: var(--font-size-lg);
+}
 .faq-list {
   max-width: 700px;
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
 .faq-item {
-  border: 2px solid #7c2fa0;
+  border: 2px solid var(--tomato);
   border-radius: 10px;
-  background: #f8f0fa;
+  background: var(--soft);
   transition: box-shadow 0.2s;
 }
 
@@ -64,17 +69,21 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
   font-weight: 600;
-  color: #7c2fa0;
+  color: var(--tomato);
+  background-color: var(--soft);
   padding: 1.2rem 1.5rem;
   cursor: pointer;
   border-radius: 10px;
-  transition: background 0.2s;
+  transition: background-color 0.2s; 
 }
 
 .faq-question:hover {
-  background: #f3e6fa;
+  background: var(--soft);
+}
+.faq-question.open {
+  background-color: var(--tomato); 
+
 }
 
 .faq-icon {
@@ -85,8 +94,8 @@ export default {
 
 .faq-answer {
   padding: 0 1.5rem 1.2rem 1.5rem;
-  color: #5a2b7a;
-  font-size: 1rem;
+  color: var(--tomato);
+  background-color: var(--soft);
   line-height: 1.6;
   animation: fadeIn 0.2s;
 }

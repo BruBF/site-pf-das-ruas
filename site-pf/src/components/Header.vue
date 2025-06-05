@@ -1,11 +1,16 @@
 <template>
   <header class="header">
     <div class="header-content">
-      <div class="logo-area">
+      <!-- LOGO leva para "/" -->
+      <router-link to="/" class="logo-area">
         <img src="/icons/soup.png" alt="Logo PF das Ruas" class="logo" />
         <span class="logo-text">PF das Ruas</span>
-      </div>
-      <button class="donate-btn">Quero doar</button>
+      </router-link>
+
+      <!-- Botão leva para "/doacoes" -->
+      <router-link to="/doacoes" class="donate-link">
+        <button class="donate-btn">Quero doar</button>
+      </router-link>
     </div>
   </header>
 </template>
@@ -19,21 +24,29 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
+/* Reset básico */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   overflow-x: hidden;
 }
+
+
+a {
+  text-decoration: none;
+}
+
 
 .header {
   background-color: var(--primary);
   padding: 1rem;
-  width: 100vw; /* Garante que ocupe toda a largura */
-  box-sizing: border-box; /* Inclui o padding no cálculo da largura */
-  position: relative; /* Garante que o header fique no fluxo normal */
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .header-content {
@@ -43,34 +56,47 @@ body {
   padding: 0 1rem;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto; /* Centraliza o conteúdo */
+  margin: 0 auto;
 }
+
+
 .logo-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  text-decoration: none;
 }
+
 
 .logo {
   width: 50px;
   height: 50px;
+  filter: brightness(0) invert(1); 
+  display: block; 
 }
+
 
 .logo-text {
   color: var(--background);
-  font-family: "Ephesis ", cursive;
+  font-family: "Ephesis", cursive;
   font-weight: 400;
-  font-style: normal;
   font-size: 30px;
   letter-spacing: 1px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+
+.donate-link {
+  text-decoration: none;
 }
 
 .donate-btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.6rem 1rem;
+  justify-content: center;
+  padding: 0.6rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
   border: none;
@@ -78,7 +104,6 @@ body {
   background: var(--mint);
   color: var(--textDark);
   white-space: nowrap;
-  max-width: 100%;
   box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.08);
   transition: background 0.2s, color 0.2s, transform 0.2s;
 }
@@ -90,14 +115,9 @@ body {
 
 @media (min-width: 1000px) {
   .header-content {
-    flex-direction: row; /* Em telas maiores: lado a lado */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .logo-text {
-
-    white-space: nowrap;
   }
 
   .donate-btn {
@@ -105,4 +125,3 @@ body {
   }
 }
 </style>
-

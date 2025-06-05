@@ -11,9 +11,12 @@ const theme = {
     colors: {
       primary: "#26408B",
       tomato: "#FF6B35",
+      soft: "#ffedea",
       gold: "#FFC857",
       mint: "#3DDC97",
+      softMint: "#eaf9ef",
       sky: "#007BFF",
+      skySoft: "#bcdcf8",
       textLight: "#F0F0F0",
       textDark: "#1E1E1E",
       background: "#ffff"

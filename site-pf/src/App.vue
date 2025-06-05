@@ -22,13 +22,17 @@ export default {
 /* src/assets/main.css */
 @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .header {
   line-height: 1.5;
 }
 
 .logo-text {
   color: var(--background);
-  font-family: "Ephesis", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
@@ -37,6 +41,8 @@ export default {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+
+
 }
 
 @media (min-width: 1024px) {

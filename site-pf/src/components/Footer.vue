@@ -3,32 +3,50 @@
     <div class="footer-content">
       <!-- Endereço -->
       <div class="footer-item">
-        <div class="icon-circle">
-          <img src="../assets/geo-alt-fill.svg" alt="Ícone Localização" />
-        </div>
+        <a
+          href="https://www.google.com/maps?q=Rua+Sarmento+Leite,+607+-+Centro+Histórico,+Porto+Alegre/RS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="icon-circle">
+            <img src="../assets/geo-alt-fill.svg" alt="Ícone Localização" />
+          </div>
+        </a>
         <div>
           <p class="footer-title">Nosso Endereço:</p>
           <p>Rua Sarmento Leite, 607 - Centro Histórico, Porto Alegre/RS</p>
         </div>
       </div>
 
+      
+   
+
       <!-- Telefone -->
       <div class="footer-item">
-        <div class="icon-circle">
-          <img src="../assets/telephone-fill.svg" alt="Ícone Telefone" />
-        </div>
+        <a
+          href="https://wa.me/5551998472398"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="icon-circle">
+            <img src="../assets/telephone-fill.svg" alt="Ícone Telefone" />
+          </div>
+        </a>
         <div>
           <p class="footer-title">Ligue para nós:</p>
           <p>(51) 99847-2398</p>
         </div>
       </div>
 
+
       <!-- Email -->
-      <div class="footer-item">
-        <div class="email-content">
-          <div class="icon-circle">
-            <img src="../assets/envelope-fill.svg" alt="Ícone Email" />
-          </div>
+       <div class="email-container">
+        <div class="footer-item">
+          <a href="mailto:rosepaz@terra.com.br">
+            <div class="icon-circle">
+              <img src="../assets/envelope-fill.svg" alt="Ícone Email" />
+            </div>
+          </a>
           <div class="footer-title">
             <p>Envie-nos um email:</p>
             <p class="email-adress">rosepaz@terra.com.br</p>
@@ -81,6 +99,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
 }
 
 .footer-content {
@@ -89,6 +108,8 @@ export default {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-divider {
@@ -164,6 +185,7 @@ export default {
   gap: 10px;
   font-size: var(--font-size-xs);
   font-family: var(--font-family-primary, 'Inter', sans-serif);
+    margin: 0 auto;
 }
 
 .footer-links a {
@@ -183,24 +205,19 @@ export default {
 }
 
 @media (min-width: 500px) {
-  .footer-content {
+  .container-footer {
+    padding: 20px 40px;
+  } 
+
+    .footer-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: flex-start; 
   }
 
   .footer-item {
-    display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
-    gap: 10px;;
-  }
-
-  .social-media-content {
-    display: flex;
-    flex-direction: column; 
     align-items: flex-start; 
-    gap: 10px; 
   }
 
   .social-icons {
@@ -209,17 +226,16 @@ export default {
   }
 
   .social-media-content{
-    display: flex;
-    align-items: center; 
+    display: flex; 
     justify-content: flex-start; 
-    gap: 10px; 
+    margin-top: 15px;
+    gap: 10px;
+  }
 
-    p {
-      margin-left: -30px;
-    }
 
-    a {
-      margin-top: 28px
+    .email-container {
+      display: flex;
+      margin-top: 20px;
     }
 
     .email-content {
@@ -232,5 +248,5 @@ export default {
       margin: 0px;
     }
   }
-}
+
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div class="about-container">
     <p>
-        Em meio ao cinza da cidade, transformamos um viaduto vazio em um espaço de acolhimento, amor e cuidado. Todos os sábados, levamos alimento para o corpo e aconchego para a alma de quem enfrenta a fome e a solidão.<br>
-         <span class="indent">
-            Ali, entre sorrisos e abraços, crianças desenham seus sonhos, vestem capas de super-heróis e, por algumas horas, podem simplesmente ser crianças. Acreditamos que cada gesto de amor tem o poder de transformar vidas e reacender a esperança.
-        </span>
+      Em meio ao cinza da cidade, transformamos um viaduto vazio em um espaço de acolhimento, amor e cuidado. Todos os sábados, levamos alimento para o corpo e aconchego para a alma de quem enfrenta a fome e a solidão.<br>
+      <span class="indent">
+        Ali, entre sorrisos e abraços, crianças desenham seus sonhos, vestem capas de super-heróis e, por algumas horas, podem simplesmente ser crianças. Acreditamos que cada gesto de amor tem o poder de transformar vidas e reacender a esperança.
+      </span>
     </p>
     <div class="slider">
       <button @click="prevSlide" class="nav-btn nav-btn-left">‹</button>
@@ -19,15 +19,15 @@ export default {
   name: 'About',
   data() {
     return {
-        images: [],
-        current: 0,
-        timer: null
+      images: [],
+      current: 0,
+      timer: null
     }
   },
   async created() {
     const modules = import.meta.glob('@/assets/about/*.jpg', { eager: true, import: 'default' });
     this.images = Object.values(modules);
-},
+  },
   mounted() {
     this.startTimer();
   },
@@ -35,9 +35,9 @@ export default {
     clearInterval(this.timer);
   },
   methods: {
-     importAllImages() {
-        const context = require.context('@/assets/about', false, /\.jpg$/);
-        return context.keys().map(context);
+    importAllImages() {
+      const context = require.context('@/assets/about', false, /\.jpg$/);
+      return context.keys().map(context);
     },
     nextSlide() {
       this.current = (this.current + 1) % this.images.length;
@@ -50,7 +50,7 @@ export default {
     startTimer() {
       this.timer = setInterval(() => {
         this.nextSlide();
-      }, 4000); 
+      }, 4000);
     },
     restartTimer() {
       clearInterval(this.timer);
@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
 .about-container {
-      display: flex;
+  display: flex;
   flex-direction: column;
   background: var(--gold);
   border-radius: 16px;
@@ -70,16 +70,16 @@ export default {
   width: 320px;
   max-width: 100%;
   box-sizing: border-box;
-  overflow: hidden; 
+  overflow: hidden;
 }
 .about-container p {
-    margin-top: 0;
+  margin-top: 0;
   margin-bottom: 16px;
   font-family: var(--font-family-primary, 'Inter', sans-serif);;
-    font-size: var(--font-size-md);
+  font-size: var(--font-size-md);
   color: var(--textDark);
-   line-height: 1.2;
-   text-indent: 2em;
+  line-height: 1.2;
+  text-indent: 0; /* Removido o indent para telas maiores */
 }
 .slider {
   position: relative;
@@ -89,11 +89,13 @@ export default {
   margin-top: 16px;
 }
 .slider img {
-  width: 272px; 
-  height: 250px;
+  width: 100%; /* A imagem ocupa a largura do slider */
+  height: auto; /* Altura automática para manter a proporção */
+  max-width: 448px; /* Largura máxima da imagem */
+  max-height: 350px; /* Altura máxima da imagem */
   object-fit: cover;
   display: block;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .indent {
@@ -105,7 +107,7 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   color: var(--mint);
-  background: rgba(0,0,0,0.40); 
+  background: rgba(0,0,0,0.40);
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
@@ -117,11 +119,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-    padding: 0;
+  padding: 0;
   line-height: 1;
 }
 .nav-btn:hover {
-  background: rgba(0,0,0,0.65); 
+  background: rgba(0,0,0,0.65);
   cursor: pointer;
 }
 .nav-btn-left {
@@ -135,7 +137,7 @@ export default {
 }
 
 @media (min-width: 580px) {
-     .about-container {
+  .about-container {
     width: 500px;
     max-width: 500px;
     height: auto;
@@ -143,26 +145,38 @@ export default {
     padding-bottom: 32px;
   }
   .slider img {
-    width: 100%;
-    max-width: 448px;
-    height: 350px;
-    max-height: 350px;
+    /* As propriedades já estão definidas para um tamanho maior */
   }
 
-    .nav-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 2rem;
-    }
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 1028px) {
   .about-container {
-    max-width: 500px;
-     max-height: 600px;
+    max-width: 400px; /* Ajustado para a largura da coluna do grid */
+    max-height: none; /* Remove a altura máxima */
     position: static;
-    margin-left: 100px;
-    margin-right: 32px; 
+    margin-left: 0; /* Remove margem esquerda */
+    margin-right: 32px; /* Mantém a margem direita para espaçamento */
+    display: flex; /* Garante que o flexbox esteja ativo */
+    flex-direction: column; /* Mantém a direção da coluna */
+    justify-content: flex-start; /* Alinha o conteúdo ao início */
+  }
+  .about-container p {
+    text-indent: 2em; /* Adiciona novamente o indent para o texto */
+  }
+  .slider {
+    margin-top: 16px; /* Restaura a margem superior */
+  }
+  .slider img {
+    max-width: 100%; /* A imagem ocupa a largura do contêiner */
+    height: auto;
+    max-height: 300px; /* Ajuste conforme necessário */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer muito */
   }
 }
 </style>
