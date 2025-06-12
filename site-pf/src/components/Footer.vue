@@ -14,7 +14,8 @@
         </a>
         <div>
           <p class="footer-title">Nosso Endereço:</p>
-          <p>Rua Sarmento Leite, 607 - Centro Histórico, Porto Alegre/RS</p>
+          <p>Rua Sarmento Leite, 607 - Sala 5<br>
+          Centro Histórico, Porto Alegre/RS </p>
         </div>
       </div>
 
@@ -49,7 +50,7 @@
           </a>
           <div class="footer-title">
             <p>Envie-nos um email:</p>
-            <p class="email-adress">rosepaz@terra.com.br</p>
+            <p class="email-adress">pfdasruas.portoalegre@gmail.com</p>
           </div>
         </div>
       </div>
@@ -77,7 +78,9 @@
     <!-- Rodapé -->
     <div class="footer-divider"></div>
     <div class="footer-bottom">
-      <p>© 2025 Todos os direitos reservados para PF das Ruas</p>
+      <p>© 2025 Todos os direitos reservados para Associação de Cidadania e <br>
+        Combate à Fome Prato Feito das Ruas. CNPJ: 55.669.277/0001-01
+      </p>
 
     </div>
   </div>
@@ -183,8 +186,9 @@ export default {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   font-family: var(--font-family-primary, 'Inter', sans-serif);
+
     margin: 0 auto;
 }
 

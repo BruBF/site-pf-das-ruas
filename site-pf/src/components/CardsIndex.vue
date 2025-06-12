@@ -2,10 +2,14 @@
   <div class="container-index">
     
       <div class="about-container">
+        <h1>Temperando a vida, com amor e solidariedade</h1>
         <p>
-          Em meio ao cinza da cidade, transformamos um viaduto vazio em um espaço de acolhimento, amor e cuidado. Todos os sábados, levamos alimento para o corpo e aconchego para a alma de quem enfrenta a fome e a solidão.<br>
+          Somos uma associação, sem fins lucrativos, sem vínculos com política ou religião, engajada em fazer a diferença na vida das pessoas em situação de vulnerabilidade social, em especial com histórico de situação de rua e drogadição, levando-lhes alimento e outras ações que, através dos nossos parceiros, lhes conferem um pouco de dignidade em suas vidas, como corte de cabelo, acompanhamento médico e psiquiátrico, além de acompanhamento veterinário aos seus pets. 
+          Afinal, alimentação e saúde são importantes, são direitos básicos.
+          <br>
           <span class="indent">
-            Ali, entre sorrisos e abraços, crianças desenham seus sonhos, vestem capas de super-heróis e, por algumas horas, podem simplesmente ser crianças. Acreditamos que cada gesto de amor tem o poder de transformar vidas e reacender a esperança.
+          Iniciamos nosso trabalho há 8 anos e meio, servindo 50 marmitas e suco para as pessoas em situação de rua nas redondezas do viaduto Imperatriz Leopoldina, em Porto Alegre, onde atuamos até hoje.
+          Nós do PF das Ruas, nos preocupamos com a importância da preservação do planeta e das ações que podemos tomar para garantir um futuro sustentável, por isso, utilizamos marmitas de papel Kraft, que é 100% reciclável, biodegradável e demora apenas 60 dias para se decompor em ambiente natural. Já a marmita de isopor pode demorar 500 anos e a de alumínio 200 anos.
           </span>
         </p>
         <div class="slider">
@@ -16,10 +20,18 @@
       </div>
 
       <div class="voluntary-container">
-        <p>
-          Atualmente nosso projeto depende unicamente de doações para continuar ajudando milhares de pessoas.
-          Ajude nos a continuar em atividade por mais anos.
-        </p>
+        <h1>Valores que Transformam Vidas</h1>
+      <p>
+        • Missão: Promover alimentação para pessoas em situação de vulnerabilidade social;<br> 
+        • Visão: Ser uma organização de referência e credibilidade na promoção e articulação da solidariedade, e do voluntariado;<br>
+        • Valores: Comprometimento, solidariedade e empatia com ser humano;<br>
+        • Fonte de Captação e Utilização: Mantemos as refeições com doações de pessoas físicas e jurídicas;<br>
+        • Voluntários: Somos  mais de 100 voluntários que são fundamentais para mantermos o projeto.<br>
+        • Espaços de Atuação: Entregamos café da manhã e refeições embaixo do Viaduto Imperatriz Leopoldina, em Porto Alegre, RS.<br>
+        Atualmente nosso projeto depende unicamente de doações para continuar ajudando milhares de pessoas.
+        Ajude nos a continuar em atividade por mais anos.
+      </p>
+
         <button @click="abrirWhatsApp" class="voluntary-button">
           <a
           href="https://wa.me/5551998472398"
@@ -32,20 +44,15 @@
       </div>
 
       <div class="partnerships-container">
+      <h1>Quem Caminha Conosco</h1>
         <p>
-          Temos uma parceria com outros projetos sociais, que visam auxiliar os assistidos em outras necessidades básicas:
+        Ampliamos a nossa atuação, com a ajuda de diversos parceiros:<br>
+        • Alimentação: todos os sábados distribuímos café da manhã e mais de 1000/1200 marmitas caprichadas;<br>
+        • Saúde: através da parceria com a ONG Médicos do Mundo, mensalmente, é oferecido atendimento veterinário, atendimento médico com laboratório para exames e testes rápidos de HIV e DSTs, quiropraxistas, enfermeiros e psicólogos;<br>
+        • Higiene e bem estar: semanalmente o grupo Barbeiros Guerreiros oferece corte de cabelo e barba, trazendo dignidade;<br>
+        • Reabilitação: encaminhamento para Comunidades Terapeúticas para oferecerem uma segunda chance para quem quer sair das drogas e ser reinserido na sociedade.Atualmente temos 2  são voluntários.<br>
+        • Assessoria Jurídica Gratuita:  com a CGI Advogados.
         </p>
-        <ol>
-          <li>ONG Viver de Rir;</li>
-          <li>Barbeiros Guerreiros POA-RS;</li>
-          <li>Banho Solidário;</li>
-          <li>Veterinários de rua;</li>
-          <li>Enfermagem de Rua;</li>
-          <li>Laboratório de Rua;</li>
-          <li>Médicos de Rua;</li>
-          <li>Mentes de Rua;</li>
-          <li>Reabilitação de Rua.</li>
-        </ol>
       </div>
 
       <div class="cards-container">
@@ -53,19 +60,19 @@
           <div class="icon-container">
             <img :src="greenCardImages['calendar-minus-fill.svg']" alt="Ícone de calendário" />
           </div>
-          <p>Há 8 anos atuando em cozinhar e servir alimentação, aos sábados das 7:30 até 14h.</p>
+          <p>Há 8 anos atuando em cozinhar e servir alimentação, aos sábados das 7h até 13h.</p>
         </div>
         <div class="card">
           <div class="icon-container">
             <img :src="greenCardImages['fork-knife.svg']" alt="Ícone de talheres" />
           </div>
-          <p>Em média, 300 café da manhã e 1000 almoços servidos.</p>
+          <p>Em média, 200 café da manhã e 1000 almoços servidos.</p>
         </div>
         <div class="card">
           <div class="icon-container">
             <img :src="greenCardImages['handshake-svgrepo-com.svg']" alt="Ícone de aperto de mãos" />
           </div>
-          <p>Extensão de atividades durante datas comemorativas como distribuição de alimentos em comunidades.</p>
+          <p>Extensão de atividades durante datas comemorativas como distribuição de alimentos, brinquedos e kits de higiene em comunidades carentes.</p>
         </div>
       </div>
   </div>
@@ -135,6 +142,10 @@ export default {
   font-size: var(--font-size-lg);
   color: var(--textDark);
   box-sizing: border-box; 
+  
+}
+h1 {
+  text-align: center;
 }
 
 .container-index {
@@ -142,6 +153,7 @@ export default {
   flex-direction: column;
   gap: 16px;
   padding: 20px;
+    
 }
 
 
@@ -153,6 +165,7 @@ export default {
 .cards-container {
   border-radius: 16px;
   padding: 24px;
+
 }
 
 .about-container {
@@ -180,12 +193,12 @@ export default {
 
 .slider img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 600px; 
+  object-fit: cover; 
   display: block;
   margin: 0 auto;
-  max-height: 350px;
 }
+
 
 .indent {
   display: block;
@@ -228,6 +241,7 @@ export default {
 
 .voluntary-container {
   background: var(--tomato);
+  line-height: 1.2;
 }
 
 .partnerships-container {
@@ -362,9 +376,8 @@ export default {
     margin-bottom: 0;
   }
   .slider img {
-    max-width: 100%;
-    height: auto;
-    max-height: 380px; 
+    width: 100%;
+    height: 600px;
     object-fit: cover;
     display: block;
   }

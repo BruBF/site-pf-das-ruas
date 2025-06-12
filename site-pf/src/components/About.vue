@@ -79,7 +79,7 @@ export default {
   font-size: var(--font-size-md);
   color: var(--textDark);
   line-height: 1.2;
-  text-indent: 0; /* Removido o indent para telas maiores */
+  text-indent: 0; 
 }
 .slider {
   position: relative;
@@ -89,10 +89,10 @@ export default {
   margin-top: 16px;
 }
 .slider img {
-  width: 100%; /* A imagem ocupa a largura do slider */
-  height: auto; /* Altura automática para manter a proporção */
-  max-width: 448px; /* Largura máxima da imagem */
-  max-height: 350px; /* Altura máxima da imagem */
+  width: 100%; 
+  height: auto; 
+  max-width: 448px; 
+  max-height: 500px; 
   object-fit: cover;
   display: block;
   margin: 0 auto;
@@ -144,10 +144,7 @@ export default {
     min-height: 585px;
     padding-bottom: 32px;
   }
-  .slider img {
-    /* As propriedades já estão definidas para um tamanho maior */
-  }
-
+  
   .nav-btn {
     width: 40px;
     height: 40px;
@@ -157,25 +154,25 @@ export default {
 
 @media (min-width: 1028px) {
   .about-container {
-    max-width: 400px; /* Ajustado para a largura da coluna do grid */
-    max-height: none; /* Remove a altura máxima */
+    max-width: 400px; 
+    max-height: none; 
     position: static;
-    margin-left: 0; /* Remove margem esquerda */
-    margin-right: 32px; /* Mantém a margem direita para espaçamento */
-    display: flex; /* Garante que o flexbox esteja ativo */
-    flex-direction: column; /* Mantém a direção da coluna */
-    justify-content: flex-start; /* Alinha o conteúdo ao início */
+    margin-left: 0; 
+    margin-right: 32px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
   }
   .about-container p {
-    text-indent: 2em; /* Adiciona novamente o indent para o texto */
+    text-indent: 2em; 
   }
   .slider {
-    margin-top: 16px; /* Restaura a margem superior */
+    margin-top: 16px; 
   }
   .slider img {
     max-width: 100%; /* A imagem ocupa a largura do contêiner */
     height: auto;
-    max-height: 300px; /* Ajuste conforme necessário */
+    max-height: 500px; /* Ajuste conforme necessário */
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer muito */
   }
 }

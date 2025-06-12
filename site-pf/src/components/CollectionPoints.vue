@@ -2,18 +2,23 @@
   <div class="donation-container">
   <div class="donation-info-card">
     <div class="text-section">
-      <p>Nosso prato mais comum para servir é arroz, feijão, massa com molho vermelho e salsicha ou alguma outra proteína. Gostaríamos de ampliar nosso cardápio com proteínas mais substanciosas, como carne de gado, porco ou frango. Para que isto se concretize precisamos de tua ajuda</p>
+      <p>Nosso prato mais comum para servir é arroz, feijão, massa com molho vermelho e salsicha ou alguma outra proteína. 
+        Quando recebemos doações, mesmo que de forma esporádica, servimos carne de panela.
+        Gostaríamos de ampliar nosso cardápio com proteínas mais substanciosas, como carne de gado, porco ou frango. Para que isto se concretize precisamos de tua ajuda</p>
     </div>
     <div class="collection-points">
       <h3>Postos de coleta:</h3>
       <ol>
-        <li>Maison Q cabelereiros: R. Quintino Bocaiúva, 310 - Moinhos de Vento, Porto Alegre - RS;</li>
-        <li>Estética Blond Hair: R. Barão do Amazonas, 809 - Petrópolis, Porto Alegre - RS;</li>
-        <li>Café Madeira: Av. Neusa Goulart Brizola, 414 - Bela Vista, Porto Alegre - RS;</li>
+        <li>Bairro Santana: Rua Vieira de Castro 315, com Cintia 51 9979-2035</li>
+        <li>Bairro Petrópolis: Estética Blond Hair: R. Barão do Amazonas, 809 - Porto Alegre/ RS -
+        A/C Filipe;
+        </li>
+        <li>Zona Sul: av Juca Batista 2203 com Sabrina Mota 51 9842-6246;</li>
       </ol>
     </div>
     <div class="donation-call">
-      <p>Quer ajudar com valores? Temos conta no Bradesco, Banrisul e Cef.</p>
+      <p>Quer ajudar com valores? Realize a doação via pix, que é nosso CNPJ:
+        55669277000101</p>
     </div>
   </div>
   </div>

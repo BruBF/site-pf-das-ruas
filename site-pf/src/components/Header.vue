@@ -1,15 +1,19 @@
 <template>
   <header class="header">
     <div class="header-content">
-      <!-- LOGO leva para "/" -->
+    
       <router-link to="/" class="logo-area">
         <img src="/icons/soup.png" alt="Logo PF das Ruas" class="logo" />
-        <span class="logo-text">PF das Ruas</span>
+        <span class="logo-text">Prato Feito<br>
+          das Ruas</span>
       </router-link>
-
-      <!-- Botão leva para "/doacoes" -->
+      
+    
       <router-link to="/doacoes" class="donate-link">
-        <button class="donate-btn">Quero doar</button>
+        
+        <button class="donate-btn">Quero doar
+        </button>
+        <p> PIX: 55.669.277/0001-01</p>
       </router-link>
     </div>
   </header>
@@ -81,7 +85,7 @@ a {
   color: var(--background);
   font-family: "Ephesis", cursive;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: 1px;
   line-height: 1;
   white-space: nowrap;
@@ -90,6 +94,14 @@ a {
 
 .donate-link {
   text-decoration: none;
+
+  p {
+    color: var(--background);
+    text-align: right;
+    font-family: var(--font-family-primary, 'Inter', sans-serif);
+    font-size: var(--font-size-sm);
+    margin-top: 10px;
+  }
 }
 
 .donate-btn {

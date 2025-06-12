@@ -5,12 +5,12 @@
       <p class="location-text">
         Estamos localizados, em baixo do
         <strong>Viaduto Brooklyn</strong> todos os sábados das
-        7h30 até 13h.
+        7h até 13h.
       </p>
       <div class="address">
         <strong>Endereço:</strong>
-        <p>Rua Sarmento Leite, 607 - 
-          Centro Histórico, Porto Alegre - RS, 90040-001</p>
+        <p>Rua Sarmento Leite, 607 - sala 5<br>
+          Centro Histórico, Porto Alegre - RS, 90050-170</p>
       </div>
     </div>
     <div class="map-container">
